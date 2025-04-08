@@ -1,4 +1,4 @@
 export const API_ROUTES = {
     HEALTHCHECK: '/api/healthcheck',
-    SCORE: '/api/score',
+    NOBEL_PRIZE: '/api/nobel-prize',
 };

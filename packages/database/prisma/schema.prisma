@@ -11,9 +11,18 @@ datasource db {
   url      = env("POSTGRES_URL")
 }
 
-// Example table used in the express router example
-model Score {
-  id    Int      @id @default(autoincrement())
-  time  DateTime
-  score Int
+model Prize {
+  id       Int      @id @default(autoincrement())
+  year     Int
+  category String
+  winners  Winner[]
+}
+
+model Winner {
+  id         Int    @id @default(autoincrement())
+  motivation String
+  firstName  String
+  lastName   String
+  prize      Prize  @relation(fields: [prizeId], references: [id])
+  prizeId    Int
 }
