@@ -1,5 +1,7 @@
 import React from 'react';
 import FileUpload from "../components/FileUpload.tsx";
+import Table from "../components/Table";
+import KeywordsForm from "../components/KeywordsForm.tsx";
 
 const HomePage = () => {
     //state to store selected file
@@ -38,6 +40,11 @@ const HomePage = () => {
         }
     };
 
+    //placeholder for our backend logic
+    const handleKeywordsSubmit = (keywords: string[]) => {
+        console.log(keywords);
+    }
+
     return (
         <div className="p-10 h-screen flex flex-col items-center justify-start">
             <h1 className="font-extrabold text-4xl pb-4 text-center">Home Page</h1>
@@ -53,6 +60,7 @@ const HomePage = () => {
                     <button onClick={() => handleUpload(selectedFile)} className="bg-black text-white rounded-lg px-5 py-1">Process and Upload</button>
                 </div>
             )}
+            <Table/>
         </div>
     );
 };

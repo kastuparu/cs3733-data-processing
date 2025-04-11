@@ -1,11 +1,12 @@
 import React, {useRef} from 'react';
+import Button from './Button';
 
 //the interface defines the props the component will accept
 interface FileUploadProps {
     onFileSelected: (file: File | null) => void;
     acceptedFileTypes?: string[];
     // ^^ can give an array of strings of accepted file types (json, pdf, etc)
-    buttonText?: string;
+    buttonText: string;
     //customize button text
 }
 
@@ -34,7 +35,8 @@ const FileUpload: React.FC<FileUploadProps> = ({ onFileSelected, acceptedFileTyp
 
     return (
         <div>
-            <button onClick={handleClick} className="bg-black text-white rounded-lg px-5 py-1">{buttonText}</button>
+            <Button onClick={handleClick} text={buttonText}></Button>
+            {/*<button onClick={handleClick} className="bg-black text-white rounded-lg px-5 py-1">{buttonText}</button>*/}
             <input type='file'
                    accept={acceptedFileTypes ? acceptedFileTypes.join(','):undefined}
                    onChange={handleFileChange}
