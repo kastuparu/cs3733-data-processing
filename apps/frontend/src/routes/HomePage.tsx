@@ -1,7 +1,6 @@
 import React from 'react';
 import FileUpload from "../components/FileUpload.tsx";
 import Table from "../components/Table";
-import KeywordsForm from "../components/KeywordsForm.tsx";
 
 const HomePage = () => {
     //state to store selected file
@@ -41,9 +40,9 @@ const HomePage = () => {
     };
 
     //placeholder for our backend logic
-    const handleKeywordsSubmit = (keywords: string[]) => {
-        console.log(keywords);
-    }
+    // const handleKeywordsSubmit = (keywords: string[]) => {
+    //     console.log(keywords);
+    // }
 
     return (
         <div className="p-10 h-screen flex flex-col items-center justify-start">

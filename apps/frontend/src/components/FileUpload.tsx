@@ -36,7 +36,6 @@ const FileUpload: React.FC<FileUploadProps> = ({ onFileSelected, acceptedFileTyp
     return (
         <div>
             <Button onClick={handleClick} text={buttonText}></Button>
-            {/*<button onClick={handleClick} className="bg-black text-white rounded-lg px-5 py-1">{buttonText}</button>*/}
             <input type='file'
                    accept={acceptedFileTypes ? acceptedFileTypes.join(','):undefined}
                    onChange={handleFileChange}

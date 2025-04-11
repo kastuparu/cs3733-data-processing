@@ -29,6 +29,7 @@ const KeywordsForm: React.FC<KeywordsFormProps> = ({
             .filter((keyword) => keyword !== '');
         //call on submit provided by parent
         onKeywordsSubmit(processedKeywords);
+        console.log(processedKeywords);
         //clear the input field
         setInputValue('');
     };

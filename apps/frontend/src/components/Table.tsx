@@ -1,5 +1,7 @@
 import React, {useState} from 'react';
 import KeywordsForm from "./KeywordsForm.tsx";
+// import { Prize, Winner } from '@prisma/client';
+//^ theoretically i can do this but I don't feel like debugging rn
 
 interface Prize {
     id: number;
@@ -72,7 +74,8 @@ const Table: React.FC = () => {
                     <ul>
                         {searchResults.map((winner) => (
                             <li key={winner.id}>
-                                <strong>{winner.firstName} {winner.lastName}</strong> - {winner.prize.year} {winner.prize.category} (Motivation: {winner.motivation})
+                                <strong>{winner.firstName} {winner.lastName}</strong> -
+                                {winner.prize.year} {winner.prize.category} (Motivation: {winner.motivation})
                             </li>
                         ))}
                     </ul>
