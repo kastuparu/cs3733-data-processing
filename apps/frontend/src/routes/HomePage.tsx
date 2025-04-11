@@ -6,6 +6,7 @@ const HomePage = () => {
     //function called by FileUpload component when file is selected
     const handleFileSelected = (file: File | null) => {
         setSelectedFile(file); //update state with stored file
+        console.log(file?.name);
     }
 
     //TODO: placeholder for backend logic:

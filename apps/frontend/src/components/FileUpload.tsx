@@ -34,7 +34,7 @@ const FileUpload: React.FC<FileUploadProps> = ({ onFileSelected, acceptedFileTyp
     };
 
     return (
-        <div>
+        <div className="w-full flex flex-col text-center items-center">
             <Button onClick={handleClick} text={buttonText}></Button>
             <input type='file'
                    accept={acceptedFileTypes ? acceptedFileTypes.join(','):undefined}
